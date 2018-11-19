@@ -22,33 +22,25 @@ public class B1932 {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < i+1 ; j++) {
                 if(n==j) break;
-
-                arr[i][j] = Integer.parseInt(st.nextToken());
-            }
-        }
-        int[][] sumArr = new int[n][n];
-        sumArr[0][0] = arr[0][0];
-        for (int i = 1; i <n ; i++) {
-            for (int j = 0; j < i+1; j++) {
-                if(j==n) break;
+                int temp = Integer.parseInt(st.nextToken());
                 if(j==0){
-                    sumArr[i][j] = sumArr[i-1][j]+arr[i][j];
+                    arr[i][j] = arr[i-1][j]+temp;
                 }else if (j==i){
-                    sumArr[i][j] = sumArr[i-1][j-1]+arr[i][j];
+                    arr[i][j] = arr[i-1][j-1]+temp;
                 }else {
-                    sumArr[i][j] = (sumArr[i - 1][j - 1] + arr[i][j] > sumArr[i - 1][j] + arr[i][j]) ? sumArr[i - 1][j - 1] + arr[i][j] : sumArr[i - 1][j] + arr[i][j];
+                    arr[i][j] = (arr[i - 1][j - 1] + temp > arr[i - 1][j] + temp) ? arr[i - 1][j - 1] + temp : arr[i - 1][j] + temp;
                 }
             }
         }
 
         int ans = -1;
         for (int i = 0; i < n ; i++) {
-            ans = (ans<sumArr[n-1][i] ? sumArr[n-1][i] : ans);
+            ans = (ans<arr[n-1][i] ? arr[n-1][i] : ans);
         }
 
-        System.out.println(ans);
+        bw.write(ans+"\n");
 
-
+        bw.flush();
         br.close();
         bw.close();
     }
