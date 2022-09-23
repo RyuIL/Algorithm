@@ -3,7 +3,7 @@ import java.security.Signature;
 import java.util.*;
 import java.io.*;
 
-class Main {
+class B1676 {
     public static long f = 1;
     
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ import java.lang.*;
 import java.util.*;
 import java.io.*;
 
-class Main {
+class B2493 {
     public static void main(String[] args) {
 
         FastReader rd = new FastReader();
