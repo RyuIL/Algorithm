@@ -2,7 +2,7 @@ import java.lang.*;
 import java.util.*;
 import java.io.*;
 
-class Main {
+class B2800 {
     
     static List<int[]> brackets;
     static Set<String> result;

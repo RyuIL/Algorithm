@@ -2,7 +2,7 @@ import java.lang.*;
 import java.util.*;
 import java.io.*;
 
-class Main {
+class B11726 {
     static ArrayList<Integer> dpList = new ArrayList<>();
 
     public static void main(String[] args) {

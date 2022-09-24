@@ -3,7 +3,7 @@ import java.security.Signature;
 import java.util.*;
 import java.io.*;
 
-class Main {
+class B11725 {
 
     public static boolean[] visited;
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
